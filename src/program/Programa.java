@@ -1,10 +1,10 @@
 package program;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import entities.Aluno;
+import entities.MyComparator;
 
 public class Programa {
 
@@ -17,7 +17,7 @@ public class Programa {
 		alunos.add(new Aluno("Bob", 23));
 		alunos.add(new Aluno("Alex", 38));
 
-		Collections.sort(alunos);
+		alunos.sort(new MyComparator());
 		
 		for (Aluno x : alunos) {
 			System.out.println(x);

@@ -5,9 +5,9 @@ import java.util.Comparator;
 public class MyComparator implements Comparator<Aluno>{
 
 	@Override
-	public int compare(Aluno a1, Aluno a2) {
+	public int compare(Aluno aluno1, Aluno aluno2) {
 	
-		return a1.getNome().compareTo(a2.getNome());
+		return aluno1.getIdade().compareTo(aluno2.getIdade());
 	}
 
 }

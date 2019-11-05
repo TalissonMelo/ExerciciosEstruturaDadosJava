@@ -1,12 +1,12 @@
 package entities;
 
-public class Aluno implements Comparable<Aluno> {
+public class Aluno {
 
 	private String nome;
 	private Integer idade;
-	
+
 	public Aluno() {
-		
+
 	}
 
 	public Aluno(String nome, Integer idade) {
@@ -35,14 +35,4 @@ public class Aluno implements Comparable<Aluno> {
 	public String toString() {
 		return "Aluno nome = " + nome + ", idade = " + idade;
 	}
-
-	@Override
-	public int compareTo(Aluno p) {
-	
-		return nome.compareTo(p.getNome());
-	}
-
-	
-	
-	
 }
