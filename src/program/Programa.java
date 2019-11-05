@@ -1,10 +1,10 @@
 package program;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import entities.Aluno;
-import entities.MyComparator;
 
 public class Programa {
 
@@ -17,7 +17,17 @@ public class Programa {
 		alunos.add(new Aluno("Bob", 23));
 		alunos.add(new Aluno("Alex", 38));
 
-		alunos.sort(new MyComparator());
+		Comparator<Aluno> comp = new Comparator<Aluno>() {
+
+			@Override
+			public int compare(Aluno a1, Aluno a2) {
+				
+				return a1.getNome().toUpperCase().compareTo(a2.getNome().toUpperCase());
+			}
+			
+		};
+		
+		alunos.sort(comp);
 		
 		for (Aluno x : alunos) {
 			System.out.println(x);
