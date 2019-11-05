@@ -17,15 +17,10 @@ public class Programa {
 		alunos.add(new Aluno("Bob", 23));
 		alunos.add(new Aluno("Alex", 38));
 
-		Comparator<Aluno> comp = new Comparator<Aluno>() {
-
-			@Override
-			public int compare(Aluno a1, Aluno a2) {
-				
-				return a1.getNome().toUpperCase().compareTo(a2.getNome().toUpperCase());
-			}
-			
+		Comparator<Aluno> comp = (a1,a2) -> {
+			return a1.getNome().toUpperCase().compareTo(a2.getNome().toUpperCase());
 		};
+		
 		
 		alunos.sort(comp);
 		
