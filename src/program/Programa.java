@@ -1,6 +1,7 @@
 package program;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -17,17 +18,21 @@ public class Programa {
 		alunos.add(new Aluno("Bob", 23));
 		alunos.add(new Aluno("Alex", 38));
 
-		Comparator<Aluno> comp = (a1,a2) -> {
-			return a1.getNome().toUpperCase().compareTo(a2.getNome().toUpperCase());
-		};
-		
-		
+		Comparator<Aluno> comp = (a1, a2) -> a1.getNome().toUpperCase().compareTo(a2.getNome().toUpperCase());
+
 		alunos.sort(comp);
+
+		for (Aluno x : alunos) {
+			System.out.println(x);
+		}
+		
+		System.out.println("------------------------------------------------");
+
+		Collections.sort(alunos);
 		
 		for (Aluno x : alunos) {
 			System.out.println(x);
 		}
-
 	}
 
 }
